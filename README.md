@@ -16,7 +16,7 @@
 
 ### App Walkthough GIF
 
-<img src="flixster.gif" width=250><br>
+<img src="Gizaw_Flixster" width=250><br>
 
 ### Notes
 App crashed and reinstalled for three times with the help of GURU I was able to compelete the Assignment. 
