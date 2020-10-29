@@ -16,8 +16,11 @@
 
 ### App Walkthough GIF
 
-<img src="Gizaw_flixster.gif" width=250><br>
+//<img src="Gizaw_flixster.gif" width=250><br>
 
+<img src="<https://github.com/RG-2020/Gizaw_Flixster/blob/master/flixster.gif><br>
+          
+https://github.com/RG-2020/Gizaw_Flixster/blob/master/flixster.gif
 ### Notes
 App crashed and reinstalled for three times with the help of GURU I was able to compelete the Assignment. 
 
