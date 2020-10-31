@@ -3,6 +3,7 @@ package com.codepath.rgizaw.gizaw_flixster.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,8 @@ import com.bumptech.glide.Glide;
 import com.codepath.rgizaw.gizaw_flixster.DetailActivity;
 import com.codepath.rgizaw.gizaw_flixster.R;
 import com.codepath.rgizaw.gizaw_flixster.models.Movie;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -85,16 +88,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             }
             Glide.with(context).load(imageUrl).into(tvPoster);
 
-            //register click listener on the whole row
-            container.setOnClickListener(new View.OnClickListener(){
+            //1. register click listener on the whole row
+            container.setOnClickListener(v -> {
+               // 2. Navigate to a new activity on tap
+                Intent i = new Intent(context, DetailActivity.class);
+                i.putExtra( "movie", Parcels.wrap(movie));
 
-                @Override
-                public void onClick(View v) {
-                   //Toast.makeText(context, movie.getTitle(), Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(context, DetailActivity.class);
-                    i.putExtra( "title", movie.getTitle());
-                    context.startActivity(i);
-                }
+                context.startActivity(i);
             });
             
         }
